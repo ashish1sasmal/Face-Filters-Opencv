@@ -4,7 +4,6 @@ import numpy as np
 def overlay_image(bg, fg, fgMask, coords):
 	(sH, sW) = fg.shape[:2]
 	(x, y) = coords
-
 	overlay = np.zeros(bg.shape, dtype="uint8")
 	overlay[y:y + sH, x:x + sW] = fg
 
