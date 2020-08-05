@@ -41,7 +41,7 @@ gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 detect = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
-rects = detect(gray,1)
+rects = detect(gray,5)
 
 
 shape = None
