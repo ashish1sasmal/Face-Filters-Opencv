@@ -24,8 +24,8 @@ def shift(w,h,angle,lx,ly):
     return (x,y)
 
 
-glass = cv2.imread("assets/glass.png")
-mask = cv2.imread("assets/glass_mask.png")
+glass = cv2.imread("assets/dog_filter.png")
+mask = cv2.imread("assets/dog_filter_mask.png")
 # img = cv2.imread("Tests/"+sys.argv[1])
 
 
@@ -49,7 +49,7 @@ while True:
     output = live()
     output = imutils.resize(output, width=500)
     gray = cv2.cvtColor(output,cv2.COLOR_BGR2GRAY)
-    rects = detect(gray,2)
+    rects = detect(gray,1)
     for (i,rect) in enumerate(rects):
         shape = predictor(gray, rect)
         shape = face_utils.shape_to_np(shape)
